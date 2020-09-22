@@ -90,6 +90,8 @@ function subscribe(eventName){
 function fire(){
 	var payload = document.getElementById('event-payload');
 	if (payload){
+        console.log('sr', sr)
+        console.log('sr.client', sr.client)
 		Sfdc.canvas.client.publish(sr.client,{
 			name : appEventName,
 			payload : payload.value
